@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# Gatsby specific
+/.cache
+/public
+
+# testing
+/coverage
+
+# native code
+/android
+/ios
+
+# media
+*.jpg
+
+# misc
+.DS_Store
+CHANGELOG.md
+
+yarn-debug.log*
+yarn-error.log*
