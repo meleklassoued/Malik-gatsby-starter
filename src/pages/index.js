@@ -28,7 +28,7 @@ function IndexPage() {
   return (
     <PageLayout>
       <Seo title="HomePage" />
-      <div>
+      <div className="d-flex align-items-center justify-content-center w100">
         <p>{t('Home')}</p>
       </div>
     </PageLayout>
