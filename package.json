@@ -5,6 +5,7 @@
   "version": "2.0.2",
   "author": "Melek lassoued <lassouedm07@gmail.com>",
   "dependencies": {
+    "@commitlint/config-conventional": "^17.3.0",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.2",
     "gatsby": "^5.1.0",
