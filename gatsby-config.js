@@ -71,7 +71,7 @@ module.exports = {
           },
           {
             matchPath: '/preview',
-            languages: ['en'],
+            languages: ['en', 'fr'],
           },
         ],
       },

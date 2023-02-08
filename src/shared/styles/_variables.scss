@@ -1,2 +1,8 @@
 // Sample color for testing
 $primary-color: blue;
+$white-color: white;
+// theme colors Example
+$theme-colors: (
+  'primary': $primary-color,
+  'white': $white-color,
+);
