@@ -4,8 +4,8 @@
 
 // Packages
 import React, { useState } from 'react';
-import { Link, graphql } from 'gatsby';
-import { useTranslation } from 'react-i18next';
+import { graphql } from 'gatsby';
+import { Link, useI18next } from 'gatsby-plugin-react-i18next';
 // Style
 import './index.scss';
 // helpers & utils
@@ -17,10 +17,8 @@ import './index.scss';
 function PageHeader() {
   /* ********************************** HOOKS ********************************* */
   // Localization
-  const { i18n } = useTranslation();
   const [showLanguages, setShowLanguages] = useState(false);
-  const { changeLanguage, languages } = i18n;
-  console.log(languages);
+  const { languages, originalPath, i18n } = useI18next();
   /* ********************************* HELPERS ******************************** */
   // get slanguage :
   const getLanguage = () => i18n.language || window.localStorage.i18nextLng;
@@ -29,16 +27,9 @@ function PageHeader() {
     return (
       <div className="languges-container position-absolute bg-primary bg-white d-flex flex-column align-items-center">
         {languages.map((lang) => (
-          <button
-            type="button"
-            key={lang}
-            className="all-unset"
-            onClick={() => {
-              changeLanguage(lang);
-            }}
-          >
+          <Link to={originalPath} language={lang} key={lang}>
             {lang}
-          </button>
+          </Link>
         ))}
       </div>
     );
